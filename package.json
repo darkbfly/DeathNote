@@ -5,6 +5,7 @@
     "jsdom": "^17.0.0",
     "png-js": "^1.0.0",
     "request": "^2.88.2",
+    "crypto-js": "^3.3.0",
     "tough-cookie": "^4.0.0"
   }
 }
