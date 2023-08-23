@@ -42,7 +42,8 @@ services:
         handler: index.main_handler
         instanceConcurrency: 15
         environmentVariables:
-          trdaCookie: "64e57eef6744790fad047b41"
+          trdaCookie: ${env(trdaCookie)}
+          chinaUnicomCookie: ${env(chinaUnicomCookie)}
         asyncConfiguration:
           maxAsyncRetryAttempts: 0
         memorySize: 128
