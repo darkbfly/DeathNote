@@ -39,7 +39,7 @@ services:
         description: 'DeathNote'
         runtime: nodejs14
         codeUri: ./
-        handler: index.main_handler
+        handler: index.handler
         instanceConcurrency: 15
         environmentVariables:
           trdaCookie: ${env(trdaCookie)}
@@ -54,4 +54,10 @@ services:
           config:    
             payload: 'trdaDraw'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 46 6,18 * * *'    
+            enable: true
+        - name: chinaUnicom
+          type: timer
+          config:    
+            payload: 'chinaUnicom'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 48 1,7,20 * * *'    
             enable: true
