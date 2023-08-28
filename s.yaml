@@ -44,6 +44,7 @@ services:
         environmentVariables:
           trdaCookie: ${env(trdaCookie)}
           chinaUnicomCookie: ${env(chinaUnicomCookie)}
+          yingshengAccount: ${env(yingshengAccount)}
         asyncConfiguration:
           maxAsyncRetryAttempts: 0
         memorySize: 128
@@ -60,4 +61,10 @@ services:
           config:    
             payload: 'chinaUnicom'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 48 1,7,20 * * *'    
+            enable: true
+        - name: ys
+          type: timer
+          config:    
+            payload: 'ys'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 50 5,10,15 * * *'    
             enable: true
