@@ -49,7 +49,7 @@ services:
         asyncConfiguration:
           maxAsyncRetryAttempts: 0
         memorySize: 128
-        timeout: 600
+        timeout: 7200
       triggers:
         - name: trdaDraw
           type: timer
