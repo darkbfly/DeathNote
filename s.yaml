@@ -45,6 +45,7 @@ services:
           trdaCookie: ${env(trdaCookie)}
           chinaUnicomCookie: ${env(chinaUnicomCookie)}
           yingsheng_data: ${env(yingsheng_data)}
+          akrd: ${env(akrd)}
         asyncConfiguration:
           maxAsyncRetryAttempts: 0
         memorySize: 128
@@ -67,4 +68,10 @@ services:
           config:    
             payload: 'ys'
             cronExpression: 'CRON_TZ=Asia/Shanghai 30 10 15 * * *'    
+            enable: true
+        - name: akrd
+          type: timer
+          config:    
+            payload: 'akrd'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 30 11 9,18 * * *'    
             enable: true
