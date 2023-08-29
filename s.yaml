@@ -44,7 +44,7 @@ services:
         environmentVariables:
           trdaCookie: ${env(trdaCookie)}
           chinaUnicomCookie: ${env(chinaUnicomCookie)}
-          yingshengAccount: ${env(yingshengAccount)}
+          yingsheng_data: ${env(yingsheng_data)}
         asyncConfiguration:
           maxAsyncRetryAttempts: 0
         memorySize: 128
