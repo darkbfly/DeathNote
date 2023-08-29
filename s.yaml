@@ -66,5 +66,5 @@ services:
           type: timer
           config:    
             payload: 'ys'
-            cronExpression: 'CRON_TZ=Asia/Shanghai 0 50 5,10,15 * * *'    
+            cronExpression: 'CRON_TZ=Asia/Shanghai 10 15 * * *'    
             enable: true
