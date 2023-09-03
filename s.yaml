@@ -48,6 +48,7 @@ services:
           akrd: ${env(akrd)}
           qcsAuthorization: ${env(qcsAuthorization)}
           qcsunionId: ${env(qcsunionId)}
+          xqzck: ${env(xqzck)}
         asyncConfiguration:
           maxAsyncRetryAttempts: 0
         memorySize: 128
@@ -82,4 +83,10 @@ services:
           config:    
             payload: 'qcs'
             cronExpression: 'CRON_TZ=Asia/Shanghai 30 5 10 * * *'    
+            enable: true
+        - name: xqz
+          type: timer
+          config:    
+            payload: 'xqz'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 30 5 8 * * *'    
             enable: true
