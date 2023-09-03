@@ -46,6 +46,8 @@ services:
           chinaUnicomCookie: ${env(chinaUnicomCookie)}
           yingsheng_data: ${env(yingsheng_data)}
           akrd: ${env(akrd)}
+          qcsAuthorization: ${env(qcsAuthorization)}
+          qcsunionId: ${env(qcsunionId)}
         asyncConfiguration:
           maxAsyncRetryAttempts: 0
         memorySize: 128
@@ -74,4 +76,10 @@ services:
           config:    
             payload: 'akrd'
             cronExpression: 'CRON_TZ=Asia/Shanghai 30 11 9,18 * * *'    
+            enable: true
+        - name: qcs
+          type: timer
+          config:    
+            payload: 'qcs'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 30 5 10 * * *'    
             enable: true
