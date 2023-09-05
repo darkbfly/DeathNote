@@ -49,6 +49,7 @@ services:
           qcsAuthorization: ${env(qcsAuthorization)}
           qcsunionId: ${env(qcsunionId)}
           xqzck: ${env(xqzck)}
+          jtbhapp: ${env(jtbhapp)}
         asyncConfiguration:
           maxAsyncRetryAttempts: 0
         memorySize: 128
@@ -89,4 +90,10 @@ services:
           config:    
             payload: 'xqz'
             cronExpression: 'CRON_TZ=Asia/Shanghai 30 5 8 * * *'    
+            enable: true
+        - name: jtbh
+          type: timer
+          config:    
+            payload: 'jtbh'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 30 5 10 * * *'    
             enable: true

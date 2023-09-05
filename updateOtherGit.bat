@@ -15,7 +15,7 @@ set "url=%~1"
 set "outputPath=%~2"
 set "newName=%~3"
 
-curl -o "%outputPath%" "%url%"
+curl --proxy 127.0.0.1:7890 -o "%outputPath%" "%url%"
 
 if %errorlevel% neq 0 (
     echo ÏÂÔØÊ§°Ü£¡
