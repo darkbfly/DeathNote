@@ -50,6 +50,7 @@ services:
           qcsunionId: ${env(qcsunionId)}
           xqzck: ${env(xqzck)}
           jtbhapp: ${env(jtbhapp)}
+          nhsy_data: ${env(nhsy_data)}
         asyncConfiguration:
           maxAsyncRetryAttempts: 0
         memorySize: 128
@@ -96,4 +97,10 @@ services:
           config:    
             payload: 'jtbh'
             cronExpression: 'CRON_TZ=Asia/Shanghai 30 5 10 * * *'    
+            enable: true
+        - name: nhsy
+          type: timer
+          config:    
+            payload: 'nhsy'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 30 4 10,20 * * *'    
             enable: true

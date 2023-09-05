@@ -3,6 +3,7 @@ setlocal
 
 call :DownloadAndRename "https://raw.githubusercontent.com/smallfawn/QLScriptPublic/main/yingsheng.js" "yingsheng.js" "ys.js"
 call :DownloadAndRename "https://raw.githubusercontent.com/smallfawn/QLScriptPublic/main/akrd.js" "akrd.js" "akrd.js"
+call :DownloadAndRename "https://raw.githubusercontent.com/smallfawn/QLScriptPublic/main/nhsy.js" "nhsy.js" "nhsy.js" 
 
 exit /b
 
