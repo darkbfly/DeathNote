@@ -52,6 +52,7 @@ services:
           jtbhapp: ${env(jtbhapp)}
           nhsy_data: ${env(nhsy_data)}
           suboer_wx: ${env(suboer_wx)}
+          yingshengAccount: ${env(yingshengAccount)}
         asyncConfiguration:
           maxAsyncRetryAttempts: 0
         memorySize: 128
