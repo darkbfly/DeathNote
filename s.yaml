@@ -111,3 +111,9 @@ services:
             payload: 'suboer'
             cronExpression: 'CRON_TZ=Asia/Shanghai 30 5 15 * * *'    
             enable: true
+        - name: config
+          type: timer
+          config:    
+            payload: 'config'
+            cronExpression: '@every 60m'    
+            enable: true
