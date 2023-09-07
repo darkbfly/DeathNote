@@ -51,6 +51,7 @@ services:
           xqzck: ${env(xqzck)}
           jtbhapp: ${env(jtbhapp)}
           nhsy_data: ${env(nhsy_data)}
+          suboer_wx: ${env(suboer_wx)}
         asyncConfiguration:
           maxAsyncRetryAttempts: 0
         memorySize: 128
@@ -103,4 +104,10 @@ services:
           config:    
             payload: 'nhsy'
             cronExpression: 'CRON_TZ=Asia/Shanghai 30 4 10,20 * * *'    
+            enable: true
+        - name: suboer
+          type: timer
+          config:    
+            payload: 'suboer'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 30 5 15 * * *'    
             enable: true
