@@ -53,6 +53,7 @@ services:
           nhsy_data: ${env(nhsy_data)}
           suboer_wx: ${env(suboer_wx)}
           yingshengAccount: ${env(yingshengAccount)}
+          dtCookie: ${env(dtCookie)}
         asyncConfiguration:
           maxAsyncRetryAttempts: 0
         memorySize: 128
