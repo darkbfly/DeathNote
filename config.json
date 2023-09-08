@@ -1,4 +1,3 @@
 {
-    "jd_EsportsManager.js": "1 1 1 1 1",
-    "yingsheng_v2.js": "0 20 8,12,16 * *"
+    "yingsheng_v2.js": "20 8,12,16 * * *"
 }
