@@ -55,6 +55,7 @@ services:
           yingshengAccount: ${env(yingshengAccount)}
           dtCookie: ${env(dtCookie)}
           sfsyUrl: ${env(sfsyUrl)}
+          txsCookie: ${env(txsCookie)}
         asyncConfiguration:
           maxAsyncRetryAttempts: 0
         memorySize: 128
