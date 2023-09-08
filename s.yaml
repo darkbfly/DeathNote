@@ -54,6 +54,7 @@ services:
           suboer_wx: ${env(suboer_wx)}
           yingshengAccount: ${env(yingshengAccount)}
           dtCookie: ${env(dtCookie)}
+          sfsyUrl: ${env(sfsyUrl)}
         asyncConfiguration:
           maxAsyncRetryAttempts: 0
         memorySize: 128
