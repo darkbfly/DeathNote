@@ -9,6 +9,7 @@ call :DownloadAndRename "https://raw.githubusercontent.com/smallfawn/QLScriptPub
 call :DownloadAndRename "https://raw.githubusercontent.com/smallfawn/QLScriptPublic/main/sfsyV2.js" "sfsyV2.js" "sfsyV2.js" 
 call :DownloadAndRename "https://raw.githubusercontent.com/smallfawn/QLScriptPublic/main/suboer.js" "suboer.js" "suboer.js" 
 call :DownloadAndRename "https://raw.githubusercontent.com/smallfawn/QLScriptPublic/main/yingsheng_v2.js" "yingsheng_v2.js" "yingsheng_v2.js" 
+call :DownloadAndRename "https://raw.githubusercontent.com/smallfawn/QLScriptPublic/main/Á¢°×VIP.js" "lb.js" "lb.js"
 exit /b
 
 :DownloadAndRename
