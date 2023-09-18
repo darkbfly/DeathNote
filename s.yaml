@@ -58,6 +58,7 @@ services:
           txsCookie: ${env(txsCookie)}
           lbvip: ${env(lbvip)}
           kgyyCookie: ${env(kgyyCookie)}
+          tyqhCookie: ${env(tyqhCookie)}
         asyncConfiguration:
           maxAsyncRetryAttempts: 0
         memorySize: 128
