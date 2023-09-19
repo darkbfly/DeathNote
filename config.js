@@ -24,13 +24,13 @@ function loadScripts(mins) {
 }
 
 exports.main_handler = async (event, context, callback) => {
-    let scripts = [];
-    var eventObj = JSON.parse(event).payload
-    if (eventObj == 'config') {
-        scripts = loadScripts(60);
-    } else {
-        scripts = [eventObj]
-    }
+    let scripts = loadScripts(60);
+    // var eventObj = JSON.parse(event).payload
+    // if (eventObj == 'config') {
+    //     scripts = loadScripts(60);
+    // } else {
+    //     scripts = [eventObj]
+    // }
     const tasks = [];
     const count = 4;
     for (let i = 0; i < scripts.length; i++) {
