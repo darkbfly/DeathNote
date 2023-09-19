@@ -53,3 +53,5 @@ async function main() {
 
     await Promise.all(tasks)
 }
+
+main()
