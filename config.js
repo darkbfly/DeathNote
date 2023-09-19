@@ -23,37 +23,33 @@ function loadScripts(mins) {
     return scripts
 }
 
-let scripts = loadScripts(60);
-// var eventObj = JSON.parse(event).payload
-// if (eventObj == 'config') {
-//     scripts = loadScripts(60);
-// } else {
-//     scripts = [eventObj]
-// }
-const tasks = [];
-const count = 4;
-for (let i = 0; i < scripts.length; i++) {
-    const script = scripts[i];
-    if (i > count) {
-        await tasks[i - count];
-        delete tasks[i - count];
+async function main() {
+    let scripts = loadScripts(60);
+    const tasks = [];
+    const count = 4;
+    for (let i = 0; i < scripts.length; i++) {
+        const script = scripts[i];
+        if (i > count) {
+            await tasks[i - count];
+            delete tasks[i - count];
+        }
+        console.log(`run script:${script}`)
+        const name = './' + script
+        tasks[i] = new Promise((resolve) => {
+            const child = execFile(process.execPath, [name])
+            child.stdout.on('data', function (data) {
+                console.log(data)
+            })
+            child.stderr.on('data', function (data) {
+                console.error(data)
+            })
+            child.on('close', function (code) {
+                console.log(`${script} finished`)
+                delete child
+                resolve()
+            })
+        })
     }
-    console.log(`run script:${script}`)
-    const name = './' + script
-    tasks[i] = new Promise((resolve) => {
-        const child = execFile(process.execPath, [name])
-        child.stdout.on('data', function (data) {
-            console.log(data)
-        })
-        child.stderr.on('data', function (data) {
-            console.error(data)
-        })
-        child.on('close', function (code) {
-            console.log(`${script} finished`)
-            delete child
-            resolve()
-        })
-    })
-}
 
-await Promise.all(tasks)
+    await Promise.all(tasks)
+}
