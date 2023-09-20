@@ -61,6 +61,7 @@ services:
           tyqhCookie: ${env(tyqhCookie)}
           ljfsjlbCookie: ${env(ljfsjlbCookie)}
           kfxtoken: ${env(kfxtoken)}
+          naixueCookie: ${env(naixueCookie)}
         asyncConfiguration:
           maxAsyncRetryAttempts: 0
         memorySize: 128
