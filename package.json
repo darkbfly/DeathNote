@@ -8,6 +8,7 @@
     "node-machine-id": "^1.1.12",
     "png-js": "^1.0.0",
     "request": "^2.88.2",
+    "dayjs": "^1.11.10",
     "tough-cookie": "^4.0.0"
   },
   "name": "deathnote",
